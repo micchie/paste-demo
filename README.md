@@ -17,7 +17,7 @@ Michio Honda, Giuseppe Lettieri, Lars Eggert and Douglas Santry, "PASTE: A Netwo
 ## Prerequisite
 * Install Virtualbox, Vagrant in your Mac or Linux
 * Install wrk in your Mac (brew install wrk) or Linux (apt-get install wrk)
-* Download vagrant box (4.1GB)(`https://drive.google.com/file/d/1NIwQzuLIYjOwygCovcY8_ZbXimVoCbWf/view?usp=sharing`)
+* Download [vagrant box (4.1GB)](https://drive.google.com/file/d/1NIwQzuLIYjOwygCovcY8_ZbXimVoCbWf/view?usp=sharing)
 * Note that the VM will launch with 2GB of memory (including emulated NVMM)
 
 ## How to lunch the VM
@@ -44,7 +44,7 @@ Setup emulated NVMM, NICs etc.
 
 Confirm your host can talk to this VM with the experiment NIC
 
-`host% ping 192.168.15.15 on your host (not in this VM)`
+`host% ping 192.168.15.15 on your host
 
 Edit Vagrantfile and setup.sh in the VM (and "vagrant reload") if you want to change this VM's address
 
@@ -52,9 +52,9 @@ Run tinyhttpd app in this VM
 
 `vm% sudo ./deployed/tinyhttpd/tinyhttpd -i eth1 -d /mnt/pmem/dumb -m -x768`
 
-Run wrk in your host
+Run wrk in your host (post1280.lua is in this repository)
 
-`host% wrk -d 2 -c 10 -t 10 http://192.168.15.15:60000/ -s ~/devel/tinyhttpd/post1280.lua`	
+`host% wrk -d 2 -c 10 -t 10 http://192.168.15.15:60000/ -s post1280.lua`	
 
 ## Contact
 Michio Honda (email: micchie [at] sfc.wide.ad.jp or twitter: @michioh)

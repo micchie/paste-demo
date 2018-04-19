@@ -13,8 +13,9 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.define "debian"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.network :forwarded_port, guest: 22, host: 33333, id: "ssh"
-  config.vm.box = "debian/stretch64"
+  config.vm.box = "paste"
   config.vm.base_mac = "080027D14Ca6"
 
   config.vm.network :"private_network", ip: "192.168.18.18"
