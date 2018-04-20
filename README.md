@@ -9,6 +9,7 @@ PASTE (stands for Packet Store)
 
 Michio Honda, Giuseppe Lettieri, Lars Eggert and Douglas Santry, "PASTE: A Network Programming Interface for Non-Volatile Main Memory", USENIX NSDI 2018 (https://www.usenix.org/conference/nsdi18/presentation/honda) 
 
+Code: https://github.com/luigirizzo/netmap/tree/paste
 
 ## The VM contains:
 * Linux kernel 4.11 compiled with necessary configuration (deployed/net-next/.config)
