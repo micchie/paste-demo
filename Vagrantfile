@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "micchie/paste-demo"
   config.vm.base_mac = "080027D14Ca6"
 
-  config.vm.network :"private_network", ip: "192.168.18.18"
+  config.vm.network :"private_network", ip: "192.168.33.34"
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
